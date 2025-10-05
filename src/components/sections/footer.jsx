@@ -9,7 +9,7 @@ const Footer = () => {
                     {/* Contact Section */}
                     <div>
                         <img
-                            src="/images/Appicodder.png"
+                            src="/images/footer-Appicodder.png"
                             alt="Appicoders Logo"
                             className="w-[310px] h-[90px]  object-contain"
                         />

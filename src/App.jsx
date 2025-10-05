@@ -6,7 +6,7 @@ import Contact from './components/sections/contact'
 function App() {
   return (
     <div>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <Contact/>
       <Footer/>
     </div>
