@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <HeroSection />
-      <Contact/>
+      {/* <Contact/> */}
       <Footer/>
     </div>
   )
