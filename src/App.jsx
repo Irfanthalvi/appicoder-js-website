@@ -7,9 +7,9 @@ import AwardRecognition from './components/sections/award-recognition'
 function App() {
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <AwardRecognition/>
-      <Contact/>
+      {/* <Contact/> */}
       <Footer/>
     </div>
   )
