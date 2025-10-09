@@ -1,116 +1,226 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Brain, Smartphone, Globe, Layers, Cpu, Rocket } from "lucide-react";
 
 const AboutAndServices = () => {
-  const services = [
-    {
-      id: 1,
-      icon: <Smartphone size={26} />,
-      title: "Custom Mobile Applications",
-      desc: "iOS, Android & Flutter Apps",
-    },
-    {
-      id: 2,
-      icon: <Globe size={26} />,
-      title: "Custom Web Development",
-      desc: "React.js, Next.js, Node.js Apps",
-    },
-    {
-      id: 3,
-      icon: <Layers size={26} />,
-      title: "Augmented Reality",
-      desc: "React AR & Unity 3D Apps",
-    },
-    {
-      id: 4,
-      icon: <Brain size={26} />,
-      title: "Artificial Intelligence",
-      desc: "AI models & Machine Learning",
-    },
-    {
-      id: 5,
-      icon: <Cpu size={26} />,
-      title: "Blockchain Development",
-      desc: "Custom Blockchain Solutions",
-    },
-    {
-      id: 6,
-      icon: <Rocket size={26} />,
-      title: "MVP Development",
-      desc: "For Startups & Enterprises",
-    },
-  ];
+    const services = [
+        {
+            id: 1,
+            img: "images/about-service-icon1.png",
+            title: "Custom Mobile Applications",
+            desc: "iOS, Android and Wearable Apps",
+        },
+        {
+            id: 2,
+            img: "images/about-service-icon2.png",
+            title: "Artificial Intelligence",
+            desc: "Innovative AI & ML Solutions",
+        },
+        {
+            id: 3,
+            img: "images/about-service-icon3.png",
+            title: "Custom Web Development ",
+            desc: "Robust Webs, Progressive Web Apps",
+        },
+        {
+            id: 4,
+            img: "images/about-service-icon4.png",
+            title: "Blockchain Development",
+            desc: "Custom Blockchain Solutions",
+        },
+        {
+            id: 5,
+            img: "images/about-service-icon5.png",
+            title: "Augmented Reality ",
+            desc: "Futuristic AR Apps",
+        },
+        {
+            id: 6,
+            img: "images/about-service-icon6.png",
+            title: "MVP Development",
+            desc: "For Startups & Entrepreneurs",
+        },
+    ];
 
-  return (
-    <section className="w-full flex flex-col">
+    return (
+        <section className="w-full flex flex-col overflow-hidden">
 
-      {/* ================= TOP WHITE SECTION ================= */}
-      <div className="bg-white py-16 px-6 md:px-16 text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-          <span className="text-red-600 font-bold">Appicoders</span> – #1. Mobile App & Web Development Company in USA
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto md:mx-0 mb-6 leading-relaxed">
-          Welcome to Appicoders, your trusted partner for expert mobile app and web development services. 
-          Our team of professionals specializes in designing, developing, and maintaining 
-          next-gen solutions to empower modern platforms — including Android, iOS, and Web interfaces.
-        </p>
-        <Button className="bg-red-600 hover:bg-red-700 text-white">Read More</Button>
-      </div>
+            {/* ================= TOP WHITE SECTION ================= */}
+            <div className="bg-white py-20 px-6 md:px-16 text-center md:text-left w-full flex flex-col items-center justify-center">
+                <div className="w-full md:w-[85%] flex flex-col md:flex-row justify-between items-center gap-10">
+                    <h2 className="text-[57px] font-bold text-gray-900 leading-snug">
+                        <span className="text-red-600">Appicoders</span> – #<span className="text-red-600">1</span> Mobile
+                        <br />App & Web Development<br />Company in USA
+                    </h2>
 
-      {/* ================= MIDDLE RED SERVICES SECTION ================= */}
-      <div
-        className="relative bg-gradient-to-br from-red-700 to-red-600 text-white py-20 px-6 md:px-16 overflow-hidden"
-        style={{
-          backgroundImage: "url('/images/our-services-bg.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "right center",
-          backgroundSize: "contain",
-        }}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6">Our Services</h3>
-          <p className="text-gray-200 mb-12 max-w-2xl">
-            Get to know about what we’re good at.
-          </p>
+                    <div className="flex flex-col gap-8 max-w-[550px]">
+                        <p className="text-black font-semibold text-[22px] leading-snug">
+                            Welcome to Appicoders, your trusted partner for expert mobile
+                            app and web development. With over 10+ years of experience,
+                            we specialize in designing, developing, and marketing cutting-
+                            edge solutions for Android, iOS, and Windows platforms.
+                        </p>
+                        <Button className="uppercase bg-red-800 text-white w-[210px] h-[60px] font-semibold text-[20px] rounded-md">
+                            Read More
+                        </Button>
+                    </div>
+                </div>
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="flex flex-col items-start bg-white/10 backdrop-blur-md p-6 rounded-2xl hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="mb-3">{service.icon}</div>
-                <h4 className="text-lg font-semibold">{service.title}</h4>
-                <p className="text-sm text-gray-200">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
-      {/* ================= BOTTOM CASE STUDY SECTION ================= */}
-      <div
-        className="relative py-24 bg-cover bg-center text-white"
-        style={{
-          backgroundImage: "url('/images/case-study-bg.jpg')",
-        }}
-      >
-        <div className="bg-black/50 absolute inset-0"></div>
+            {/* ================= MIDDLE RED SERVICES SECTION ================= */}
+            <div
+                className="
+          relative 
+          w-full 
+          h-[195vh]  
+          flex items-center justify-center 
+          text-white 
+          overflow-visible 
+          -mb-115 
+          z-20
+        "
+                style={{
+                    backgroundImage: "url('images/about-service-background1.png')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center bottom",
+                    backgroundSize: "100% 100%",
+                }}
+            >
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 text-center">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-4">Caviar – Order Food Delivery</h3>
-          <p className="text-gray-200 max-w-2xl mx-auto mb-8">
-            A user-friendly food delivery app designed for local restaurants offering fast order 
-            tracking, seamless payment, and engaging user experience.
-          </p>
-          <Button className="bg-white text-red-600 font-semibold hover:bg-gray-100">
-            View Case Study
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
+                <div className="absolute text-white top-[34%] left-[6.5%] mt-4">
+                    <h1 className="text-[66px] font-bold mb-2 leading-[1.1]">Our Services</h1>
+                    <h3 className="text-[33px] mt-0 leading-[1.2]">
+                        Get to know about what we’re good at.
+                    </h3>
+                </div>
+
+                {/* ✅ Absolute service grid positioned directly inside this section */}
+                <div
+                    className="
+                              absolute 
+                              top-[45%] left-[6.5%]
+                              grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-16
+                              text-white z-30
+                              w-[945px] 
+                              "
+                >
+                    {/* <h1>Our Services</h1> */}
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className="flex items-center gap-5 bg-transparent"
+                        >
+                            {/* Circular Icon */}
+                            <div className="flex items-center justify-center bg-white rounded-full size-[90px] shadow-md">
+                                <img
+                                    src={service.img}
+                                    alt={service.title}
+                                    className="size-[95px] object-contain"
+                                />
+                            </div>
+
+                            {/* Text */}
+                            <div>
+                                <h4 className="text-[24px] font-bold text-white">
+                                    {service.title}
+                                </h4>
+                                <p className="text-[22px] text-gray-200">{service.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Background Computer Image */}
+                <div className="absolute right-0 top-[37%] transform -translate-y-1/2">
+                    <img
+                        src="images/about-service-computer.png"
+                        alt="Computer"
+                        className="w-[840px] object-contain"
+                    />
+                </div>
+            </div>
+
+
+
+            {/* ================= BOTTOM CASE STUDY SECTION ================= */}
+            <div
+                className="relative w-full h-[143.5vh] flex items-center justify-start text-white z-10 overflow-hidden px-16"
+                style={{
+                    backgroundImage: `url('images/about-service-background2.png')`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center bottom",
+                    backgroundSize: "100% 100%",
+                }}
+            >
+                <div className="absolute left-[111px] top-[448px] z-30 max-w-2xl text-left space-y-6">
+                    {/* --- Small Top Labels --- */}
+                    <div className="flex gap-4.5 mb-3">
+                        {["iOS Development", "Android Development", "UI/UX Design"].map((label) => (
+                            <span
+                                key={label}
+                                className="bg-white text-red-600 font-medium text-[8.5px] rounded-md shadow-sm w-[107px] h-[35px] flex items-center justify-center text-center"
+                            >
+                                {label}
+                            </span>
+                        ))}
+                    </div>
+
+                    {/* --- Title --- */}
+                    <h3 className="text-[42.5px] font-bold text-white leading-none pt-1.5">
+                        Caviar - Order Food<br /> Delivery
+                    </h3>
+
+                    {/* --- Description --- */}
+                    <p className="text-gray-200 text-[24px] pt-1 text-bold leading-none w-[850px]">
+                        Get food delivered from curated lists of local restaurants right at your<br />
+                        fingertips with Caviar. Enjoy quality dining at home and make any<br />
+                        night a special occasion.
+                    </p>
+
+                    {/* --- Store Buttons --- */}
+                    <div className="flex items-center gap-4 pt-2">
+                        <a href="#" className="hover:opacity-90 transition">
+                            <img
+                                src="images/about-service-appstore.png"
+                                alt="App Store"
+                                className="w-[160px] h-auto"
+                            />
+                        </a>
+                        <a href="#" className="hover:opacity-90 transition">
+                            <img
+                                src="images/about-service-googleplay.png"
+                                alt="Google Play"
+                                className="w-[160px] h-auto"
+                            />
+                        </a>
+                    </div>
+
+                    {/* --- View Case Study Button --- */}
+                    <Button className="bg-red-800 text-white w-81 h-16 font-semibold text-lg rounded-md px-8 py-6 mt-5">
+                        VIEW CASE STUDY
+                    </Button>
+                </div>
+
+                {/* --- Images on Right --- */}
+                <div className="absolute right-[-78px] -translate-x-1/2 top-[380px] z-20">
+                    <img
+                        src="images/about-service-mobile.png"
+                        alt="Overlay Image"
+                        className="w-[554px] object-contain"
+                    />
+                </div>
+
+                <div className="absolute right-[86px] -translate-x-1/2 top-[603px] z-20">
+                    <img
+                        src="images/about-service-icon.png"
+                        alt="Overlay Icon"
+                        className="w-[45px] h-auto object-contain mt-1"
+                    />
+                </div>
+            </div>
+
+        </section>
+    );
 };
 
 export default AboutAndServices;
