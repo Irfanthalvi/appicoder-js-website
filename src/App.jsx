@@ -8,8 +8,7 @@ function App() {
   return (
     <div>
       {/* <HeroSection /> */}
-      {/* <Contact/> */}
-      <AboutAndServices/>
+      <Contact/>
       <Footer/>
     </div>
   )
