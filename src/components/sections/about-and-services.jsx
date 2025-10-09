@@ -1,45 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { services } from "../about-service-mockdata";
 
 const AboutAndServices = () => {
-    const services = [
-        {
-            id: 1,
-            img: "images/about-service-icon1.png",
-            title: "Custom Mobile Applications",
-            desc: "iOS, Android and Wearable Apps",
-        },
-        {
-            id: 2,
-            img: "images/about-service-icon2.png",
-            title: "Artificial Intelligence",
-            desc: "Innovative AI & ML Solutions",
-        },
-        {
-            id: 3,
-            img: "images/about-service-icon3.png",
-            title: "Custom Web Development ",
-            desc: "Robust Webs, Progressive Web Apps",
-        },
-        {
-            id: 4,
-            img: "images/about-service-icon4.png",
-            title: "Blockchain Development",
-            desc: "Custom Blockchain Solutions",
-        },
-        {
-            id: 5,
-            img: "images/about-service-icon5.png",
-            title: "Augmented Reality ",
-            desc: "Futuristic AR Apps",
-        },
-        {
-            id: 6,
-            img: "images/about-service-icon6.png",
-            title: "MVP Development",
-            desc: "For Startups & Entrepreneurs",
-        },
-    ];
 
     return (
         <section className="w-full flex flex-col overflow-hidden">
@@ -101,7 +64,7 @@ const AboutAndServices = () => {
                               top-[45%] left-[6.5%]
                               grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-16
                               text-white z-30
-                              w-[945px] 
+                              w-[928px] 
                               "
                 >
                     {/* <h1>Our Services</h1> */}
@@ -124,7 +87,7 @@ const AboutAndServices = () => {
                                 <h4 className="text-[24px] font-bold text-white">
                                     {service.title}
                                 </h4>
-                                <p className="text-[22px] text-gray-200">{service.desc}</p>
+                                <p className="text-[21px] font-semibold text-gray-200">{service.desc}</p>
                             </div>
                         </div>
                     ))}
