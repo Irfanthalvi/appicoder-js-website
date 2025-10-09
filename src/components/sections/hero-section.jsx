@@ -4,7 +4,7 @@ import { MoveLeft, MoveRight, Phone } from "lucide-react";
 export default function HeroSection() {
     return (
         <section
-            className="relative w-full h-[990px] bg-cover bg-center bg-no-repeat min-h-screen"
+            className="relative w-full bg-cover bg-center bg-no-repeat min-h-screen"
             style={{ backgroundImage: "url('/images/heroSection.png')" }}
         >
 
