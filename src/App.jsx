@@ -7,7 +7,8 @@ import AboutAndServices from './components/sections/about-and-services'
 function App() {
   return (
     <div>
-      {/* <HeroSection /> */}
+      <HeroSection />
+      <AboutAndServices/>
       <Contact/>
       <Footer/>
     </div>
