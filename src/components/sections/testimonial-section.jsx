@@ -1,21 +1,38 @@
 import { Quote } from "lucide-react";
-import React from "react";
+import { testimonialData } from "../data/testimonial-section-mockdata";
 
 const TestimonialSection = () => {
     return (
         <section
             className="relative flex items-center justify-center h-[1080px] bg-[length:100%_106%] bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('images/testimonial-background.png')" }}
+            style={{ backgroundImage: `url('${testimonialData.backgroundImage}')` }}
         >
-
             {/* 🔴 Red Overlay */}
             <div className="absolute inset-0 flex justify-center pt-[147px]">
-                <div className="bg-[#E01923] w-[87%] h-[71.2%] rounded-[10px] opacity-100 mix-blend-multiply shadow-[0_4px_20px_#0000001A]"></div>
+                <div
+                    className="rounded-[10px] opacity-100 mix-blend-multiply shadow-[0_4px_20px_#0000001A]"
+                    style={{
+                        backgroundColor: testimonialData.overlay.color,
+                        width: testimonialData.overlay.width,
+                        height: testimonialData.overlay.height,
+                    }}
+                ></div>
             </div>
 
             {/* White Quote Circle (Top Left) */}
-            <div className="absolute top-[66px] left-[155px] size-[160px] bg-white rounded-full flex items-center justify-center shadow-md">
-                <Quote className="size-[80px] rotate-180 text-[#E01923]" />
+            <div
+                className="absolute bg-white rounded-full flex items-center justify-center shadow-md"
+                style={{
+                    top: testimonialData.topQuote.position.top,
+                    left: testimonialData.topQuote.position.left,
+                    width: testimonialData.topQuote.size,
+                    height: testimonialData.topQuote.size,
+                }}
+            >
+                <Quote
+                    className="text-[#E01923] rotate-180"
+                    style={{ width: testimonialData.topQuote.iconSize, height: testimonialData.topQuote.iconSize }}
+                />
             </div>
 
             {/* Content */}
@@ -23,14 +40,14 @@ const TestimonialSection = () => {
                 {/* Left Text */}
                 <div className="text-white pt-[169px]">
                     <h4 className="uppercase tracking-wide text-[31.6px] text-white/80 mb-3">
-                        CLIENT TESTIMONIALS
+                        {testimonialData.heading.subtitle}
                     </h4>
                     <h2 className="text-[66px] font-bold leading-none">
-                        What our clients <br />
-                        <span className="relative top-[11px] inline-block">are Saying.</span>
+                        {testimonialData.heading.titleLine1} <br />
+                        <span className="relative top-[11px] inline-block">
+                            {testimonialData.heading.titleLine2}
+                        </span>
                     </h2>
-
-
                 </div>
 
                 {/* White Testimonial Card */}
@@ -40,8 +57,8 @@ const TestimonialSection = () => {
                         {/* Profile Image */}
                         <div className="relative">
                             <img
-                                src="images/testimonial-image.png"
-                                alt="Client"
+                                src={testimonialData.client.image}
+                                alt={testimonialData.client.name}
                                 className="rounded-full size-[160px] object-cover"
                             />
                             {/* 🔴 Small Red Quote Overlap */}
@@ -53,7 +70,7 @@ const TestimonialSection = () => {
                         {/* Client Name + Line */}
                         <div className="ml-6.5 mb-1.5">
                             <h3 className="text-[28.5px] font-bold text-gray-900">
-                                Scarlett Lawrence
+                                {testimonialData.client.name}
                             </h3>
                             <div className="w-[120px] h-[4px] bg-[#E01923] rounded-full"></div>
                         </div>
@@ -61,20 +78,18 @@ const TestimonialSection = () => {
 
                     {/* Testimonial Text */}
                     <p className="text-[#000000] leading-relaxed text-semibold text-[17px]">
-                        Thank you Team Appingine you guys have a great understanding of
-                        what's current, and get things done very quickly compared to
-                        others. Reliable communication and qualitative suggestions on useful
-                        functionality during the planning stage made for a final product
-                        that surpassed initial expectations. Their Project management is
-                        amazing. Tight deadlines were reliably met without issue. Our Strong
-                        recommendations if you’re looking for quality work.
+                        {testimonialData.client.testimonial}
                     </p>
 
                     {/* 🔴 Bottom Decorative Lines */}
                     <div className="flex justify-end gap-2 mt-6.5 mr-9">
-                        <span className="w-[41px] h-[4.5px] bg-[#E01923] rounded-full"></span>
-                        <span className="w-[21px] h-[4.5px] bg-[#E01923] rounded-full opacity-70"></span>
-                        <span className="w-[21px] h-[4.5px] bg-[#E01923] rounded-full opacity-50"></span>
+                        {testimonialData.lines.map((line, index) => (
+                            <span
+                                key={index}
+                                className="h-[4.5px] bg-[#E01923] rounded-full"
+                                style={{ width: line.width, opacity: line.opacity }}
+                            ></span>
+                        ))}
                     </div>
                 </div>
             </div>
