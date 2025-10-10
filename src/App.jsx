@@ -4,6 +4,7 @@ import Contact from './components/sections/contact'
 import AboutAndServices from './components/sections/about-and-services'
 import WhyChooseUs from './components/sections/why-choose-us'
 import AwardRecognition from './components/sections/award-recognition'
+import Products from './components/sections/products'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AboutAndServices />
       <WhyChooseUs />
       <AwardRecognition/>
+      <Products/>
       <Contact />
       <Footer />
     </div>
