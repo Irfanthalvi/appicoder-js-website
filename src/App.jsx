@@ -15,12 +15,12 @@ function App() {
       <HeroSection />
       <AboutAndServices />
       <WhyChooseUs />
-      <AwardRecognition/>
-      <Products/>
-      <Technology/>
-      <Industries/>
-      <Contact />
       <TestimonialSection/>
+      <Industries/>
+      <Technology/>
+      <Products/>
+      <AwardRecognition/>
+      <Contact />
       <Footer />
     </div>
   )
