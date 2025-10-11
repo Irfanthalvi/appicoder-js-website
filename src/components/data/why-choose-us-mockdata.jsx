@@ -20,7 +20,7 @@
       img: "/images/WhyChooseUs-icon3.png",
       title: "Flexible Payment Terms",
       description:
-        <>Get your apps developed with the most<br/> affordable price and with our <br/>flexible payment terms — you pay as your <br/>project progresses.</>,
+        <>Get your apps developed with most<br/> affordable price and with our <br/>flexible payment terms, you pay as your <br/>project progresses.</>,
       active: false,
     },
   ];
