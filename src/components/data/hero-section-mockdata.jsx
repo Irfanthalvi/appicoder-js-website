@@ -1,18 +1,18 @@
-import { MoveLeft, MoveRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-   export const navLinks = [
-        "HOME",
-        "About",
-        "Services",
-        "Why Choose Us",
-        "Portfolio",
-        "Products",
-        "Testimonial",
-        "Technologies",
-        "Contact",
-    ];
+export const navLinks = [
+  { name: "HOME", href: "#HOME" },
+  { name: "About", href: "#ABOUT" },
+  { name: "Services", href: "#SERVICES" },
+  { name: "Why Choose Us", href: "#PORTFOLIO" },
+  { name: "Portfolio", href: "#PRODUCTS" },
+  { name: "Products", href: "#PRODUCTS" },
+  { name: "Testimonial", href: "#TESTIMONIAL" },
+  { name: "Technologies", href: "#TECHNOLOGIES" },
+  { name: "Contact", href: "#CONTACT" },
+];
 
   export  const arrows = [
-        { icon: <MoveRight size={16} strokeWidth={4} />, key: "right" },
-        { icon: <MoveLeft size={16} strokeWidth={4} />, key: "left" },
+    { icon: <ArrowLeft size={90} />, key: "left" },
+        { icon: <ArrowRight  size={28}/>, key: "right" },
     ];

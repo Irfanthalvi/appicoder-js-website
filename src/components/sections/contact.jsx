@@ -40,7 +40,7 @@ const Contact = () => {
               )
             )}
 
-            <Button className="bg-gradient-to-r from-[#a30000] via-black to-[#a30000] hover:opacity-90 text-white font-semibold py-8 rounded-md text-lg">
+            <Button className="bg-gradient-to-r from-[#a30000] via-black to-[#a30000] hover:opacity-90 text-white font-semibold py-8 rounded-md text-[22px]">
               {content.cta}
             </Button>
           </form>

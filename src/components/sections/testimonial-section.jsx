@@ -30,7 +30,7 @@ const TestimonialSection = () => {
                 }}
             >
                 <Quote
-                    className="text-[#E01923] rotate-180"
+                    className="text-[#E01923] rotate-180 fill-[#E01923]"
                     style={{ width: testimonialData.topQuote.iconSize, height: testimonialData.topQuote.iconSize }}
                 />
             </div>

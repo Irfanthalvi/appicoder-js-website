@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import {Phone } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Phone, Menu } from "lucide-react";
 import { arrows, navLinks } from "../data/hero-section-mockdata";
 
 export default function HeroSection() {
-
     return (
         <section
             className="relative w-full h-[990px] bg-cover bg-center bg-no-repeat min-h-screen"
@@ -11,8 +11,8 @@ export default function HeroSection() {
         >
             <div className="w-full">
                 <div className="max-w-[1572px] mx-auto flex items-center justify-between">
+                    {/* ✅ Logo */}
                     <div className="px-6 py-11">
-                        {/* Logo */}
                         <img
                             src="/images/herosection-appicoder.png"
                             alt="Appicoders Logo"
@@ -20,65 +20,105 @@ export default function HeroSection() {
                         />
                     </div>
 
-                    <div>
-                        {/* Navigation */}
-                        <nav className="hidden md:flex space-x-7 text-white font-semibold font-Lato text-[21px] px-9">
-                            {navLinks.map((link, index) => (
-                                <a key={index} href="#">
-                                    {link}
-                                </a>
-                            ))}
+                    {/* ✅ Desktop Navigation */}
+                    <div className="max-xl:hidden flex items-center justify-start">
+                        <nav className="hidden md:flex flex-col w-270 justify-start text-white font-semibold font-Lato text-[21px]">
+                            <div className="flex gap-7">
+                                {navLinks.map((link, index) => (
+                                    <a
+                                        key={index}
+                                        href={link.href}
+                                        className="hover:text-red-400 transition"
+                                    >
+                                        {link.name}
+                                    </a>
+                                ))}
+                            </div>
+
+                            <div className="flex justify-end ">
+                                <Button className="mt-2 mr-11 w-[230px] h-[50px] bg-red-500 border-2 border-white rounded-full text-white text-[20px] transition flex items-center gap-2">
+                                    <Phone size={30} color="white" fill="white" />
+                                    +1 (800) 826-0018
+                                </Button>
+                            </div>
                         </nav>
 
-                        {/* Call Button */}
-                        <Button className="mt-2 ml-210 w-[230px] h-[50px] bg-red-500 border border-white rounded-full text-white text-[20px] transition">
-                            <span>
-                                <Phone size={28} />
-                            </span>
-                            +1 (800) 826-0018
-                        </Button>
+                    </div>
+
+                    {/* ✅ Mobile Drawer */}
+                    <div className="xl:hidden">
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" className="text-white absolute top-5 right-5">
+                                    <Menu size={26} />
+                                </Button>
+                            </SheetTrigger>
+
+                            <SheetContent
+                                side="top"
+                                className="bg-black text-white h-[65vh] flex flex-col items-center justify-center space-y-4"
+                            >
+                                <nav className="flex flex-col space-y-3 text-base font-medium font-Lato text-center">
+                                    {navLinks.map((link, index) => (
+                                        <SheetClose asChild key={index}>
+                                            <a href={link.href} className="hover:text-red-400 transition">
+                                                {link.name}
+                                            </a>
+                                        </SheetClose>
+                                    ))}
+                                </nav>
+                            </SheetContent>
+                        </Sheet>
                     </div>
                 </div>
             </div>
 
-            <div className="flex px-18">
-                <div>
-                    {/* Mobile Image */}
+            {/* ✅ Hero Content */}
+            <div className="flex max-md:flex-col px-18 max-md:px-0 relative">
+                <div className="w-[500px] max-md:flex max-md:justify-center">
                     <img
                         src="/images/herosection-mobile.png"
                         alt="Appicoders Logo"
-                        className="w-[510px] object-cover"
+                        className="w-[510px] max-md:w-[230px] max-md:h-[334px] max-2xl:w-[260px] max-2xl:h-[360px] h-[750px] object-cover absolute top-0"
                     />
                 </div>
 
-                <div className="py-31 pl-7.5 text-white">
-                    {/* Heading */}
-                    <h1 className="text-[75px] font-bold leading-tight">
-                        Leading the Way in App <br />
-                        <span className="text-white text-[60px] leading-tight relative -top-5">
+                <div className="py-31 pl-10 text-white max-lg:absolute">
+                    {/* Headings */}
+                    <div className="leading-tight max-lg:mt-56">
+                        <h1 className="text-[75.5px] font-bold leading-[1.1] mb-1 max-lg:text-5xl max-md:text-4xl max-sm:text-2xl">
+                            Leading the Way in App
+                        </h1>
+                        <h2 className="text-[62px] font-bold leading-[1.1] max-lg:text-4xl max-md:text-3xl max-sm:text-xl">
                             Development Innovation
-                        </span>
-                    </h1>
+                        </h2>
+                    </div>
 
                     {/* Paragraph */}
-                    <p className="mt-5 text-[27px] max-w-2xl leading-tight">
+                    <p className="mt-11 text-[31px] max-w-4xl leading-tight max-md:text-xl">
                         We build Android & iOS Mobile Apps that cater all your
                         <br /> business needs and take it on the next level.
                     </p>
 
                     {/* CTA Button */}
-                    <div className="mt-8">
-                        <Button className="bg-gradient-to-r from-[#a30000] via-black to-[#a30000] hover:opacity-90 text-white font-semibold py-6 w-[367px] h-[70px] rounded-md text-lg">
+                    <div className="mt-10">
+                        <Button
+                            className="bg-gradient-to-r from-[#a30000] via-black to-[#a30000] 
+               hover:opacity-90 text-white font-semibold py-6 
+               md:w-[328px] h-[65px] rounded-md text-[22.5px] 
+               w-full max-sm:w-full"
+                        >
                             GET A FREE QUOTE
                         </Button>
                     </div>
 
-                    {/* Left-Right Buttons */}
-                    <div className="mt-10 flex gap-4">
+
+                    {/* Arrows */}
+                    <div className="max-xl:hidden mt-29 pl-157 flex gap-4">
                         {arrows.map((arrow) => (
                             <Button
                                 key={arrow.key}
-                                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 transition"
+                                className="size-14 flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 transition"
                             >
                                 {arrow.icon}
                             </Button>
