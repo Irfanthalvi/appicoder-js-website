@@ -1,85 +1,98 @@
 import { aboutLinks, services, socialLinks } from "../data/footer-mockdata";
 
 const Footer = () => {
-    return (
-        <footer className="min-h-[490px] bg-gradient-to-b from-[#1C1D27] to-[#12131A]">
-            <div className="w-full border-t text-white py-12 px-6 md:px-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-[1250px] mx-auto pt-9">
+  return (
+    <footer className="min-h-[490px] bg-gradient-to-b from-[#1C1D27] to-[#12131A]">
+      <div className="w-full border-t text-white py-12 px-6 md:px-16">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-12 w-[1250px] mx-auto pt-9
+                     max-2xl:w-[1000px]
+                     max-xl:w-[900px]
+                     max-lg:w-[90%] max-lg:gap-10
+                     max-md:w-[95%] max-md:grid-cols-2
+                     max-sm:w-[95%] max-sm:grid-cols-1 max-sm:gap-8"
+        >
+          {/* Contact Section */}
+          <div className="flex flex-col items-start max-sm:items-center">
+            <img
+              src="/images/footer-Appicodder.png"
+              alt="Appicoders Logo"
+              className="w-[310px] h-[90px] object-contain max-lg:w-[260px] max-md:w-[230px] max-sm:w-[200px]"
+            />
 
-                    {/* Contact Section */}
-                    <div>
-                        <img
-                            src="/images/footer-Appicodder.png"
-                            alt="Appicoders Logo"
-                            className="w-[310px] h-[90px] object-contain"
-                        />
+            <div className="pt-9.5 max-sm:text-center">
+              <h3 className="font-[Segoe UI] text-[32px] font-semibold mb-1 max-lg:text-[28px] max-md:text-[24px] max-sm:text-[22px]">
+                Contact Us
+              </h3>
+              <p className="font-[Segoe UI] font-bold text-[16px] leading-[22px] text-gray-400">
+                Tel: +1 (800) 826-8018
+              </p>
+              <p className="font-[Segoe UI] font-bold text-[16px] leading-[22px] text-gray-400">
+                Email: info@appicoders.com
+              </p>
 
-                        <div className="pt-9.5">
-                            <h3 className="font-[Segoe UI] text-[32px] font-semibold mb-1">
-                                Contact Us
-                            </h3>
-                            <p className="font-[Segoe UI] font-bold text-[16px] leading-[22px] text-gray-400">
-                                Tel: +1 (800) 826-8018
-                            </p>
-                            <p className="font-[Segoe UI] font-bold text-[16px] leading-[22px] text-gray-400">
-                                Email: info@appicoders.com
-                            </p>
-
-                            <div className="flex gap-4 mt-3">
-                                {socialLinks.map((link, index) => (
-                                    <a
-                                        key={index}
-                                        href={link.href}
-                                        aria-label="Social Link"
-                                        className={`transition-colors border rounded-xl p-1 ${link.color}`}
-                                    >
-                                        {link.icon}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* About Section */}
-                    <div className="pt-9 pl-26">
-                        <h3 className="font-[Segoe UI] text-[40px] font-semibold mb-8">
-                            About
-                        </h3>
-                        <ul className="space-y-4 font-[Segoe UI]">
-                            {aboutLinks.map((item, index) => (
-                                <li key={index}>
-                                    <a href={item.href} className="text-gray-400 text-[16px] font-bold">
-                                        {item.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Services Section */}
-                    <div className="pt-9 pl-3">
-                        <h3 className="font-[Segoe UI] text-[40px] font-semibold mb-8">
-                            Appicoders Services
-                        </h3>
-                        <ul className="text-[16px] font-[Segoe UI] space-y-3.5">
-                            {services.map((service, index) => (
-                                <li key={index} className="uppercase flex items-start text-gray-400 font-bold">
-                                    <span className="mr-2">»</span> {service}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+              <div className="flex gap-4 mt-3 justify-start max-sm:justify-center">
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    aria-label="Social Link"
+                    className={`transition-colors border rounded-xl p-1 ${link.color}`}
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
             </div>
+          </div>
 
-            <div>
-                <div className="border-t border-gray-700 w-full my-3" />
-                <div className="text-center text-[16px] text-gray-300 mt-8">
-                    © 2025 APPICODERS. ALL RIGHTS RESERVED.
-                </div>
-            </div>
-        </footer>
-    );
+          {/* About Section */}
+          <div className="pt-9 pl-26 max-lg:pl-10 max-md:pl-6 max-sm:pl-0 max-sm:text-center">
+            <h3 className="font-[Segoe UI] text-[40px] font-semibold mb-8 max-lg:text-[32px] max-md:text-[28px] max-sm:text-[24px]">
+              About
+            </h3>
+            <ul className="space-y-4 font-[Segoe UI]">
+              {aboutLinks.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.href}
+                    className="text-gray-400 text-[16px] font-bold hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Section */}
+          <div className="pt-9 pl-3 max-md:pl-0 max-sm:text-center">
+            <h3 className="font-[Segoe UI] text-[40px] font-semibold mb-8 max-lg:text-[32px] max-md:text-[28px] max-sm:text-[24px]">
+              Appicoders Services
+            </h3>
+            <ul className="text-[16px] font-[Segoe UI] space-y-3.5 max-sm:inline-block max-sm:text-left">
+              {services.map((service, index) => (
+                <li
+                  key={index}
+                  className="uppercase flex items-start text-gray-400 font-bold max-sm:justify-center"
+                >
+                  <span className="mr-2">»</span> {service}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Line */}
+      <div>
+        <div className="border-t border-gray-700 w-full my-3" />
+        <div className="text-center text-[16px] text-gray-300 mt-8 px-4">
+          © 2025 APPICODERS. ALL RIGHTS RESERVED.
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
