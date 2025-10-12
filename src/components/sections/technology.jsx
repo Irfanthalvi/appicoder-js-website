@@ -4,7 +4,7 @@ import { technologyData } from "../data/technology-mockdata";
 
 export default function Technology() {
     return (
-        <section
+        <section id="TECHNOLOGIES"
             className="relative w-full bg-cover bg-center flex flex-col items-center justify-center"
             style={{ backgroundImage: `url('${technologyData.backgroundImage}')` }}
         >

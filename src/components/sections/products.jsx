@@ -2,7 +2,7 @@ import { products, productsData } from "../data/products-mockdata";
 
 export default function Products() {
   return (
-    <section
+    <section id="PRODUCTS"
       className="relative w-full bg-cover bg-center pt-6 bg-no-repeat border-b"
       style={{ backgroundImage: `url('${productsData.backgroundImage}')` }}
     >

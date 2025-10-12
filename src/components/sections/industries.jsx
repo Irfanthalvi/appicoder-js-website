@@ -3,7 +3,7 @@ import { industriesData } from "../data/inderstries-mock-data";
 
 const Industries = () => {
     return (
-        <section className="py-17 bg-[#E8ECEF]">
+        <section id="PORTFOLIO" className="py-17 bg-[#E8ECEF]">
             <div className="max-w-[90%] mx-auto px-6">
                 <h2 className="text-[66px] font-bold text-center text-[#1C1D27] mb-6
                        max-lg:text-[52px] max-md:text-[42px] max-sm:text-[32px]">

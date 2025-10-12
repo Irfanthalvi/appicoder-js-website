@@ -3,7 +3,7 @@ import { testimonialData } from "../data/testimonial-section-mockdata";
 
 const TestimonialSection = () => {
   return (
-    <section
+    <section id="TESTIMONIAL"
       className="relative flex items-center justify-center h-[1080px] bg-[length:100%_106%] shadow-lg bg-center bg-no-repeat"
       style={{ backgroundImage: `url('${testimonialData.backgroundImage}')` }}
     >
@@ -33,7 +33,7 @@ const TestimonialSection = () => {
         }}
       >
         <Quote
-          className="text-[#E01923] rotate-180"
+          className="text-[#E01923] fill-[#E01923] rotate-180"
           style={{ width: testimonialData.topQuote.iconSize, height: testimonialData.topQuote.iconSize }}
         />
       </div>
@@ -78,7 +78,7 @@ const TestimonialSection = () => {
               {/* 🔴 Small Red Quote Overlap */}
               <div className="absolute left-[28px] top-[138px] bottom-[5px] size-[44px] bg-[#E01923] rounded-full flex items-center justify-center shadow-md
                              max-xl:hidden">
-                <Quote className="size-5 text-white rotate-180 " />
+                <Quote className="size-5 text-white fill-white rotate-180 " />
               </div>
             </div>
 

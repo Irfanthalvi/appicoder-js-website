@@ -106,7 +106,7 @@ export default function HeroSection() {
                             className="bg-gradient-to-r from-[#a30000] via-black to-[#a30000] 
                hover:opacity-90 text-white font-semibold py-6 
                md:w-[328px] h-[65px] rounded-md text-[22.5px] 
-               w-full max-sm:w-full"
+               w-full max-sm:w-[260px]"
                         >
                             GET A FREE QUOTE
                         </Button>

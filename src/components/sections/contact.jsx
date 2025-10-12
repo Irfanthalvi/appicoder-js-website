@@ -7,7 +7,7 @@ import { contactInfo, content, formFields } from "../data/contact-mockdata";
 const Contact = () => {
 
   return (
-    <section
+    <section id="CONTACT"
       className="flex flex-col md:flex-row w-full h-[960px]
                  max-xl:h-auto max-lg:h-auto max-md:h-auto max-sm:h-auto"
     >

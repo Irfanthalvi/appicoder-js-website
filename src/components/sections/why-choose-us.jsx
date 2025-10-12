@@ -3,7 +3,7 @@ import { cards } from "../data/why-choose-us-mockdata";
 const WhyChooseUs = () => {
 
   return (
-    <section
+    <section id="WHY-CHOOSE-US"
       className="relative flex flex-col h-[890px] w-full bg-[length:100%] bg-no-repeat bg-[#EAEDEF] px-6"
       style={{
         backgroundImage: "url('/images/WhyChooseUs-background.png')",
