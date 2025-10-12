@@ -71,7 +71,7 @@ const AboutAndServices = () => {
                 <div className="absolute text-white top-[34%] left-[6.5%] mt-4 
                 max-lg:top-[28%] max-md:top-[22%] max-sm:top-[18%]">
                     <h1 id="SERVICES" className="text-[66px] font-bold mb-2 leading-[1.1] 
-                 max-lg:text-[45px] max-md:text-[33px] max-sm:text-[23px]">
+                 max-xl:text-[45px] max-lg:text-[45px] max-md:text-[33px] max-sm:text-[23px]">
                         Our Services
                     </h1>
                     <h3 className="text-[33px] mt-0 leading-[1.2] 
@@ -126,7 +126,7 @@ const AboutAndServices = () => {
                                 <h4
                                     className="
           text-[24px] font-bold text-white
-          max-lg:text-[25px] max-md:text-[27px] max-sm:text-[16px]
+          max-xl:text-[26px] max-lg:text-[25px] max-md:text-[27px] max-sm:text-[16px]
         "
                                 >
                                     {service.title}
@@ -134,7 +134,7 @@ const AboutAndServices = () => {
                                 <p
                                     className="
           text-[21px] font-semibold text-gray-200
-          max-lg:text-[15px] max-md:text-[15px] max-sm:text-[12px]
+          max-xl:text-[15px] max-lg:text-[15px] max-md:text-[15px] max-sm:text-[12px]
         "
                                 >
                                     {service.desc}
