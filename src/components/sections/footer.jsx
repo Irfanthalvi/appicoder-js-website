@@ -87,7 +87,7 @@ const Footer = () => {
       {/* Bottom Line */}
       <div>
         <div className="border-t border-gray-700 w-full my-3" />
-        <div className="text-center text-[16px] text-gray-300 mt-8 px-4">
+        <div className="text-center text-[16px] text-gray-300 mt-8 px-4 max-xl:pb-5">
           © 2025 APPICODERS. ALL RIGHTS RESERVED.
         </div>
       </div>
