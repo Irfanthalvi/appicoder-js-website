@@ -10,7 +10,7 @@ export default function HeroSection() {
             style={{ backgroundImage: "url('/images/heroSection.png')" }}
         >
             <div className="w-full">
-                <div className="max-w-[1572px] mx-auto flex items-center justify-between">
+                <div className=" mx-[68px] flex items-center justify-between">
                     {/* ✅ Logo */}
                     <div className="px-6 py-11">
                         <img
